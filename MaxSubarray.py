@@ -2,8 +2,7 @@ def Find_Max_Crossing_Subarray(A,lo,mid,hi):
     left_sum = -float("inf")
     sum = 0
     max_left = 0
-    for i in range(mid,lo+1,-1):
-        print i
+    for i in reversed(range(lo,mid+1)):
         sum = sum + A[i]
         if sum > left_sum:
             left_sum = sum
@@ -34,8 +33,9 @@ def Find_Max_Subarray(A,lo,hi):
         return cross_tuple
         
 A = [13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7]
+B = [-2,3,5,4,6,-9,10]
 print Find_Max_Subarray(A,0,15)
-        
+print Find_Max_Subarray(B,0,6)        
         
     
     
